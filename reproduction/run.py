@@ -16,6 +16,7 @@ from reproduction.falsification import (
     claim_4_proof_dependency_check,
 )
 from reproduction.proof_certificates import claim_2_certificate, claim_5_certificate
+from reproduction.representation_search import claim_4_exhaustive_search
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -82,10 +83,12 @@ def cumulative_route() -> dict[str, object]:
     claim_1 = claim_1_counterexample()
     claim_2 = claim_2_certificate()
     claim_3 = claim_3_counterexample()
-    claim_4 = claim_4_proof_dependency_check()
+    claim_4_dependency = claim_4_proof_dependency_check()
+    claim_4 = claim_4_exhaustive_search()
+    claim_4["prior_proof_dependency_route"] = claim_4_dependency
     claim_5 = claim_5_certificate()
     return {
-        "stage": "cumulative_four_claim_certificates",
+        "stage": "claim_4_exhaustive_finite_search",
         "baseline_regression": baseline,
         "scientific_verdicts": {
             "claim_1": claim_1["verdict"],
@@ -101,7 +104,7 @@ def cumulative_route() -> dict[str, object]:
             "claim_4": claim_4,
             "claim_5": claim_5,
         },
-        "limitations": "Claims 1 and 3 are exact falsifications; Claims 2 and 5 have proof-level certificates. Claim 4 remains BLOCKED because a broken proof dependency alone is not a theorem counterexample.",
+        "limitations": "Claims 1 and 3 are exact falsifications; Claims 2 and 5 have proof-level certificates. Claim 4 combines a proof-dependency audit with complete finite-domain search, but remains BLOCKED unless an assumption-satisfying counterexample is found.",
     }
 
 
