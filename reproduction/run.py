@@ -15,6 +15,7 @@ from reproduction.falsification import (
     claim_3_counterexample,
     claim_4_proof_dependency_check,
 )
+from reproduction.proof_certificates import claim_2_certificate, claim_5_certificate
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,37 +77,39 @@ def baseline_audit() -> dict[str, object]:
     }
 
 
-def falsification_route() -> dict[str, object]:
+def cumulative_route() -> dict[str, object]:
     baseline = baseline_audit()
     claim_1 = claim_1_counterexample()
+    claim_2 = claim_2_certificate()
     claim_3 = claim_3_counterexample()
     claim_4 = claim_4_proof_dependency_check()
+    claim_5 = claim_5_certificate()
     return {
-        "stage": "assumption_satisfying_falsification",
+        "stage": "cumulative_four_claim_certificates",
         "baseline_regression": baseline,
         "scientific_verdicts": {
             "claim_1": claim_1["verdict"],
-            "claim_2": "BLOCKED",
+            "claim_2": claim_2["verdict"],
             "claim_3": claim_3["verdict"],
             "claim_4": claim_4["verdict"],
-            "claim_5": "BLOCKED",
+            "claim_5": claim_5["verdict"],
         },
         "claims": {
             "claim_1": claim_1,
-            "claim_2": {"verdict": "BLOCKED", "reason": "Not targeted by this route."},
+            "claim_2": claim_2,
             "claim_3": claim_3,
             "claim_4": claim_4,
-            "claim_5": {"verdict": "BLOCKED", "reason": "Not targeted by this route."},
+            "claim_5": claim_5,
         },
-        "limitations": "A broken proof dependency is not called a theorem falsification. Claim 4 remains BLOCKED pending a premise-complete proof or KLST* counterexample.",
+        "limitations": "Claims 1 and 3 are exact falsifications; Claims 2 and 5 have proof-level certificates. Claim 4 remains BLOCKED because a broken proof dependency alone is not a theorem counterexample.",
     }
 
 
 def main() -> int:
     started = time.perf_counter()
-    result = falsification_route()
+    result = cumulative_route()
     result["compute"] = {
-        "required_core_estimate": 2,
+        "required_core_estimate": 4,
         "selected_flavor": "cpu-upgrade",
         "container_image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
         "actual_cpu_allocation": os.cpu_count(),
