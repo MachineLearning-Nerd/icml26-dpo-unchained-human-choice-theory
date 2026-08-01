@@ -7,7 +7,7 @@ This branch freezes the evaluator-visible `5/10` baseline before stronger claim 
 | Paper | arXiv `2507.07855v4` |
 | Judged Space | `DineshAI/j4c3i3a5kH@091825f20ce3d96b380ae87e43acb6633d73e568` |
 | Assessment | Five historical checks are real numerical spot-checks, but all five exact theorem contracts remain `BLOCKED` at this baseline. |
-| Compute | Hugging Face `cpu-upgrade`; estimated 2 cores; actual allocation and runtime are printed by the run. |
+| Compute | Hugging Face `cpu-upgrade` with `ghcr.io/astral-sh/uv:python3.12-bookworm-slim`; estimated 2 cores; actual allocation and runtime are printed by the run. |
 | Fixed command | `uv sync --frozen && uv run --frozen python -m reproduction.run` |
 
 The baseline audit is intentionally not presented as theorem verification. Its purpose is to preserve the judged evidence, pin the paper source, and make the missing evaluator-visible requirements executable.

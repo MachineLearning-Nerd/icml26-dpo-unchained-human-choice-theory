@@ -76,6 +76,7 @@ def main() -> int:
     result["compute"] = {
         "required_core_estimate": 2,
         "selected_flavor": "cpu-upgrade",
+        "container_image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
         "actual_cpu_allocation": os.cpu_count(),
         "python": platform.python_version(),
         "platform": platform.platform(),
