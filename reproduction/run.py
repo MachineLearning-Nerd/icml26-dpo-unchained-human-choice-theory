@@ -18,6 +18,7 @@ from reproduction.falsification import (
 from reproduction.proof_certificates import claim_2_certificate, claim_5_certificate
 from reproduction.representation_search import claim_4_exhaustive_search
 from reproduction.reduction_audit import claim_4_reduction_audit
+from reproduction.adversarial_search import claim_4_adversarial_falsification
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -88,9 +89,11 @@ def cumulative_route() -> dict[str, object]:
     claim_4 = claim_4_exhaustive_search()
     claim_4["prior_proof_dependency_route"] = claim_4_dependency
     claim_4["representation_reduction_route"] = claim_4_reduction_audit()
+    claim_4["mandatory_falsification_route"] = claim_4_adversarial_falsification()
+    claim_4["verdict"] = claim_4["mandatory_falsification_route"]["verdict"]
     claim_5 = claim_5_certificate()
     return {
-        "stage": "claim_4_representation_reduction_audit",
+        "stage": "claim_4_mandatory_adversarial_falsification",
         "baseline_regression": baseline,
         "scientific_verdicts": {
             "claim_1": claim_1["verdict"],
@@ -106,7 +109,7 @@ def cumulative_route() -> dict[str, object]:
             "claim_4": claim_4,
             "claim_5": claim_5,
         },
-        "limitations": "Claims 1 and 3 are exact falsifications; Claims 2 and 5 have proof-level certificates. Three distinct Claim 4 routes now expose two proof gaps and finite corroboration, but still neither prove nor falsify the universal theorem.",
+        "limitations": "Claims 1 and 3 are exact falsifications; Claims 2 and 5 have proof-level certificates. Claim 4 has completed all four required routes and is FALSIFIED only if the final witness passes every antecedent; otherwise it remains BLOCKED.",
     }
 
 
@@ -114,7 +117,7 @@ def main() -> int:
     started = time.perf_counter()
     result = cumulative_route()
     result["compute"] = {
-        "required_core_estimate": 4,
+        "required_core_estimate": 8,
         "selected_flavor": "cpu-upgrade",
         "container_image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
         "actual_cpu_allocation": os.cpu_count(),
