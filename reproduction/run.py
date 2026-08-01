@@ -20,6 +20,7 @@ from reproduction.representation_search import claim_4_exhaustive_search
 from reproduction.reduction_audit import claim_4_reduction_audit
 from reproduction.adversarial_search import claim_4_adversarial_falsification
 from reproduction.release_audit import release_audit
+from reproduction.postpublish_audit import postpublish_audit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -118,6 +119,7 @@ def main() -> int:
     started = time.perf_counter()
     result = cumulative_route()
     result["release_audit"] = release_audit(result)
+    result["postpublication_audit"] = postpublish_audit()
     result["compute"] = {
         "required_core_estimate": 8,
         "selected_flavor": "cpu-upgrade",

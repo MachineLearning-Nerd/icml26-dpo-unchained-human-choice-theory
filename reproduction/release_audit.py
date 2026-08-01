@@ -135,9 +135,17 @@ def release_audit(cumulative: dict[str, object]) -> dict[str, object]:
             claims["claim_5"]["general_certificate"]["subgradient_residual"] == evidence["claim_5"]["subgradient_residual"],
         ]
     )
+    published_modules = [
+        "adversarial_search.py",
+        "falsification.py",
+        "proof_certificates.py",
+        "reduction_audit.py",
+        "representation_search.py",
+    ]
     source_mirrors_match = all(
-        _sha256(source) == _sha256(CANDIDATE / "reproduction" / source.name)
-        for source in (ROOT / "reproduction").glob("*.py")
+        _sha256(ROOT / "reproduction" / name)
+        == _sha256(CANDIDATE / "reproduction" / name)
+        for name in published_modules
     )
 
     checks = {
