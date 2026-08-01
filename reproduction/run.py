@@ -10,6 +10,12 @@ import sys
 import time
 from pathlib import Path
 
+from reproduction.falsification import (
+    claim_1_counterexample,
+    claim_3_counterexample,
+    claim_4_proof_dependency_check,
+)
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / ".openresearch" / "artifacts"
@@ -70,9 +76,35 @@ def baseline_audit() -> dict[str, object]:
     }
 
 
+def falsification_route() -> dict[str, object]:
+    baseline = baseline_audit()
+    claim_1 = claim_1_counterexample()
+    claim_3 = claim_3_counterexample()
+    claim_4 = claim_4_proof_dependency_check()
+    return {
+        "stage": "assumption_satisfying_falsification",
+        "baseline_regression": baseline,
+        "scientific_verdicts": {
+            "claim_1": claim_1["verdict"],
+            "claim_2": "BLOCKED",
+            "claim_3": claim_3["verdict"],
+            "claim_4": claim_4["verdict"],
+            "claim_5": "BLOCKED",
+        },
+        "claims": {
+            "claim_1": claim_1,
+            "claim_2": {"verdict": "BLOCKED", "reason": "Not targeted by this route."},
+            "claim_3": claim_3,
+            "claim_4": claim_4,
+            "claim_5": {"verdict": "BLOCKED", "reason": "Not targeted by this route."},
+        },
+        "limitations": "A broken proof dependency is not called a theorem falsification. Claim 4 remains BLOCKED pending a premise-complete proof or KLST* counterexample.",
+    }
+
+
 def main() -> int:
     started = time.perf_counter()
-    result = baseline_audit()
+    result = falsification_route()
     result["compute"] = {
         "required_core_estimate": 2,
         "selected_flavor": "cpu-upgrade",
