@@ -10,6 +10,8 @@ import sys
 import time
 from pathlib import Path
 
+from reproduction.proof_certificates import claim_2_certificate, claim_5_certificate
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / ".openresearch" / "artifacts"
@@ -70,11 +72,46 @@ def baseline_audit() -> dict[str, object]:
     }
 
 
+def constructive_route() -> dict[str, object]:
+    baseline = baseline_audit()
+    claim_2 = claim_2_certificate()
+    claim_5 = claim_5_certificate()
+    verdicts = {
+        "claim_1": "BLOCKED",
+        "claim_2": claim_2["verdict"],
+        "claim_3": "BLOCKED",
+        "claim_4": "BLOCKED",
+        "claim_5": claim_5["verdict"],
+    }
+    return {
+        "stage": "constructive_proof_certificates",
+        "baseline_regression": baseline,
+        "scientific_verdicts": verdicts,
+        "claims": {
+            "claim_1": {
+                "verdict": "BLOCKED",
+                "reason": "The published construction uses F^-1 on all [0,1] although the theorem assumes only image containment; this route does not repair that quantified gap.",
+            },
+            "claim_2": claim_2,
+            "claim_3": {
+                "verdict": "BLOCKED",
+                "reason": "Source definitions were recovered exactly, but this constructive route has no complete non-BTL abstaining KLST* model.",
+            },
+            "claim_4": {
+                "verdict": "BLOCKED",
+                "reason": "The proof invokes an external representation theorem; a premise-complete machine certificate is not yet present.",
+            },
+            "claim_5": claim_5,
+        },
+        "limitations": "A universal theorem is not upgraded from finite examples. Only Claims 2 and 5 have proof-level certificates in this route.",
+    }
+
+
 def main() -> int:
     started = time.perf_counter()
-    result = baseline_audit()
+    result = constructive_route()
     result["compute"] = {
-        "required_core_estimate": 2,
+        "required_core_estimate": 4,
         "selected_flavor": "cpu-upgrade",
         "container_image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
         "actual_cpu_allocation": os.cpu_count(),
