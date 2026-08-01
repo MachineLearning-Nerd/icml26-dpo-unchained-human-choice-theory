@@ -1,0 +1,25 @@
+{
+  "revision": "091825f20ce3d96b380ae87e43acb6633d73e568",
+  "source_manifest_sha256": "c74470a4d5e06429ba85a05430739a3977c44f144307743e9f6547dcb3b2b4d0",
+  "text_files": [
+    {"path":".gitattributes","sha256":"11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"},
+    {"path":"README.md","sha256":"707b550e0ef2ba9ba294dffc5c130b630d4cb21568bceba70ab0280210bdd564"},
+    {"path":"bucket-icon.svg","sha256":"d1c28fc0a4e07f2688d013f576cf76ffc422d278d56a52a82989e0b93b3b3964"},
+    {"path":"index.html","sha256":"e8eb31325700ae1f018f5ff99ae3af7b22bf38c4da65796877e84c9b1e84d4e7"},
+    {"path":"logbook.css","sha256":"64e1de4358c79ec0d5f2697c56f98258c025e992c94ad7b3b7801739222ca41d"},
+    {"path":"logbook.js","sha256":"69d73869184f936613668569980f31984be65229e77c4df4ba9604d3de70c02b"},
+    {"path":"logbook.json","sha256":"206563128cede29587b96c385c1f71531d9465d7b8ec4d432e1de895595e1558"},
+    {"path":"pages/claims/page.md","sha256":"98cf4d3fb54df4def58ca48d4e1cafa8e2bc153f3330bedc4e70bcdaf30fee3e"},
+    {"path":"pages/conclusion/page.md","sha256":"797127f34eba69684ef648c0cec566fedad79f277ec970752cae773cfd8f78ce"},
+    {"path":"pages/evidence/page.md","sha256":"420add61ee5e02516255c7bded41fddf91fdabcaa59beb2c378fa6edb9225513"},
+    {"path":"pages/index.md","sha256":"c63a108acad51a3a0f36686a36cb36b93b9fa8d5de7868b29e35165973fcba5c"},
+    {"path":"pages/overview/page.md","sha256":"c1dc71c73cdfe2822f904b241dfad1ef507ece2fad7e5a93f5dfa60dfab505e2"},
+    {"path":"pages/verification-run/page.md","sha256":"ffd464d38deab4aec9f8a2b01948894df8aae008dc38200a12c3a2fc064a9afe"},
+    {"path":"style.css","sha256":"789bfd541c9f06658ac410d968e9c39fa8c63a48a08643b36071b984c699a9f4"}
+  ],
+  "binary_files_retained": [
+    {"path":"trackio-logo-light.png","sha256":"a6eb72253c0128ce79b526a86b7943eed37beec186b5f57ff6c1701d0e9ff596"},
+    {"path":"trackio-logo.png","sha256":"3e3792061d4d095759da30d7cfe7f14b621901793cd4d677b61b2896f5bf472b"},
+    {"path":"trackio-wordmark-dark.png","sha256":"71da94795855710d214801eb9b9b7b8898e9a8757abac0e22966a0531bbb2f4f"}
+  ]
+}

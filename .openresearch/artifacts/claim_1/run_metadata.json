@@ -1,0 +1,1 @@
+{"fixed_command":"uv sync --frozen && uv run --frozen python -m reproduction.run","git_sha":"3ada4e95a82907b7f350bc66088d6394c1e4cdef","seed":null,"backend":"hf","flavor":"cpu-upgrade","estimated_cores":2,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.308565,"gpu_requested":false}

@@ -1,0 +1,1 @@
+{"verdict":"FALSIFIED","symbolic_solution_for_choice_sum":["1"],"smt_abstention_under_axioms":"UNSAT","scope":"every atomic pair and alpha in (0,1)"}

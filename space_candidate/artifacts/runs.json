@@ -1,0 +1,15 @@
+{
+  "fixed_command": "uv sync --frozen && uv run --frozen python -m reproduction.run",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "runs": [
+    {"purpose":"baseline audit","run_id":"3b68e966-b552-484a-a6c9-d869f7036b81","git_sha":"2e05e92b65dcf103e70e2c6114402729ff2ae026","estimated_cores":2,"actual_cpus":64,"job_runtime_seconds":16},
+    {"purpose":"constructive certificates","run_id":"0a0568bc-3e72-416a-b7c2-4c4c23b253be","git_sha":"eb77763fe9669bf02fcece1b6fb93b8cab4b8b67","estimated_cores":4,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.336413},
+    {"purpose":"exact falsifications","run_id":"735b9f6c-8dad-4cdd-ae12-78b48b44f682","git_sha":"3ada4e95a82907b7f350bc66088d6394c1e4cdef","estimated_cores":2,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.308565},
+    {"purpose":"cumulative certificates","run_id":"a1fa0c4a-78d7-452d-a2b7-7b60c5fca330","git_sha":"ec5a15ae88d3aba81fc7e952f37ad2497f8eb096","estimated_cores":4,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.401211},
+    {"purpose":"Claim 4 exhaustive finite route","run_id":"e586390e-3bd8-475d-a5d0-442543c67831","git_sha":"c472c55239f41981fb76e91ee9a07f18e5536f9f","estimated_cores":4,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.754425},
+    {"purpose":"Claim 4 reduction audit","run_id":"f78238ff-1d63-45f9-994a-b2cea1eab6c3","git_sha":"eea82d5ca7dac2393f67494026f132fbc077a665","estimated_cores":4,"actual_cpus":64,"job_runtime_seconds":21,"verifier_runtime_seconds":0.690839},
+    {"purpose":"Claim 4 adversarial route","run_id":"1a793bde-e523-469d-8f44-91ad934761dc","git_sha":"be9e71d16855a80ab75cf19b6aedd0f009ac97d5","estimated_cores":8,"actual_cpus":64,"job_runtime_seconds":42,"verifier_runtime_seconds":20.912088}
+  ],
+  "gpu_requested": false,
+  "cost_note": "Hugging Face billing amount was not exposed in run logs; runtime is reported without inventing a monetary cost."
+}

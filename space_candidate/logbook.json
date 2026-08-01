@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "title": "DPO Unchained — exact claim verification",
+  "emoji": "🔬",
+  "space_id": "DineshAI/j4c3i3a5kH",
+  "paper": "arXiv:2507.07855v4",
+  "tags": ["icml2026-repro", "paper-j4c3i3a5kH", "proof-certificates"],
+  "updated_at": "2026-08-02T00:00:00+05:30",
+  "root": {
+    "slug": "index",
+    "title": "Current verification",
+    "file": "pages/index.md",
+    "children": [
+      {"slug": "claim-1", "title": "Claim 1 — FALSIFIED", "file": "pages/claim-1/page.md", "children": []},
+      {"slug": "claim-2", "title": "Claim 2 — VERIFIED", "file": "pages/claim-2/page.md", "children": []},
+      {"slug": "claim-3", "title": "Claim 3 — FALSIFIED", "file": "pages/claim-3/page.md", "children": []},
+      {"slug": "claim-4", "title": "Claim 4 — BLOCKED", "file": "pages/claim-4/page.md", "children": []},
+      {"slug": "claim-5", "title": "Claim 5 — VERIFIED", "file": "pages/claim-5/page.md", "children": []},
+      {"slug": "methodology", "title": "Method and provenance", "file": "pages/methodology/page.md", "children": []},
+      {"slug": "visibility", "title": "Visibility matrix", "file": "pages/visibility/page.md", "children": []},
+      {"slug": "release-report", "title": "Forecast and release report", "file": "pages/release-report/page.md", "children": []},
+      {"slug": "red-team", "title": "Evaluator-blind red team", "file": "pages/red-team/page.md", "children": []},
+      {"slug": "historical", "title": "Historical rejected baseline", "file": "pages/historical/page.md", "children": []}
+    ]
+  }
+}

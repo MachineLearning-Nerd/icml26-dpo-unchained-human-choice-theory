@@ -1,0 +1,14 @@
+{
+  "space_id": "DineshAI/j4c3i3a5kH",
+  "orid": "j4c3i3a5kH",
+  "sha": "091825f20ce3d96b380ae87e43acb6633d73e568",
+  "judged_at": "2026-08-01T08:29:34+00:00",
+  "score": 5,
+  "claims": [
+    {"id": 1, "verdict": "toy", "reason": "Specific decomposition examples; imported core.py is not visible; universal quantifier is unverified."},
+    {"id": 2, "verdict": "toy", "reason": "Three numerical loss examples do not establish the all-proper-loss statement."},
+    {"id": 3, "verdict": "toy", "reason": "Only BTL was checked and lottery linearity had error 0.008."},
+    {"id": 4, "verdict": "toy", "reason": "One symmetric link does not establish the representation theorem for every KLST* choice probability."},
+    {"id": 5, "verdict": "toy", "reason": "One pointwise numerical match does not verify the general triptych construction."}
+  ]
+}

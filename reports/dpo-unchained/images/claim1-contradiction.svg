@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="300" viewBox="0 0 980 300" role="img" aria-labelledby="title">
+  <title id="title">Claim one endpoint contradiction</title><rect width="980" height="300" fill="#f8fafc" rx="18"/>
+  <g font-family="sans-serif"><text x="45" y="48" font-size="25" font-weight="700" fill="#111827">A quantified witness, not a spot-check</text>
+    <rect x="45" y="83" width="205" height="92" rx="12" fill="#dbeafe"/><text x="147" y="118" text-anchor="middle" font-size="18" fill="#1e3a8a">ψ(z)=z</text><text x="147" y="150" text-anchor="middle" font-size="18" fill="#1e3a8a">F(z)=sigmoid(z)</text>
+    <path d="M260 129 H342" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/><rect x="353" y="83" width="250" height="92" rx="12" fill="#ede9fe"/><text x="478" y="120" text-anchor="middle" font-size="18" fill="#4c1d95">decomposition forces</text><text x="478" y="150" text-anchor="middle" font-size="18" fill="#4c1d95">ℓ₀(sigmoid z)=z</text>
+    <path d="M613 129 H695" stroke="#64748b" stroke-width="3" marker-end="url(#a)"/><rect x="706" y="72" width="230" height="114" rx="12" fill="#fee2e2"/><text x="821" y="109" text-anchor="middle" font-size="18" fill="#991b1b">c=ℓ₀(0), z=c−1</text><text x="821" y="140" text-anchor="middle" font-size="18" fill="#991b1b">proper: ℓ₀(q)≥c</text><text x="821" y="169" text-anchor="middle" font-size="18" font-weight="700" fill="#991b1b">forced: ℓ₀(q)=c−1</text>
+    <text x="490" y="238" text-anchor="middle" font-size="21" font-weight="700" fill="#b91c1c">Z3 certificate: c ≤ c−1 is UNSAT</text><text x="490" y="270" text-anchor="middle" font-size="16" fill="#475569">Mutation control: reverse properness inequality → SAT</text></g>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker></defs>
+</svg>

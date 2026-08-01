@@ -1,0 +1,1 @@
+{"verdict":"BLOCKED","route_1":{"lottery_probability":"7/10","proof_lemma_false":true},"route_2":{"models":125,"sextuples_per_model":531441,"klst":19,"represented":19},"route_3":{"alpha":"3/10","mixed_witness_outside_atomic_domain":true},"route_4":{"seeds":[4401,4402,4403],"candidates":6000,"nonrepresentable":5987,"axiom_satisfying_nonrepresentable":0,"counterexample":null}}

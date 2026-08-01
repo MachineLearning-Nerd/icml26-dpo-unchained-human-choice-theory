@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">Five exact claim verdicts</title><desc id="desc">Claims one and three falsified, two and five verified, four blocked.</desc>
+  <rect width="980" height="360" fill="#0b1020" rx="18"/><text x="48" y="55" fill="#f8fafc" font-family="sans-serif" font-size="28" font-weight="700">Exact claim status after cumulative verification</text>
+  <g font-family="sans-serif" font-size="18" fill="#e2e8f0">
+    <text x="50" y="112">C1 · composite loss</text><rect x="280" y="88" width="620" height="34" rx="8" fill="#dc4962"/><text x="595" y="112" text-anchor="middle" fill="white" font-weight="700">FALSIFIED · endpoint contradiction</text>
+    <text x="50" y="164">C2 · regret/Bregman</text><rect x="280" y="140" width="620" height="34" rx="8" fill="#16a085"/><text x="595" y="164" text-anchor="middle" fill="white" font-weight="700">VERIFIED · symbolic residual 0</text>
+    <text x="50" y="216">C3 · KLST* abstention</text><rect x="280" y="192" width="620" height="34" rx="8" fill="#dc4962"/><text x="595" y="216" text-anchor="middle" fill="white" font-weight="700">FALSIFIED · axioms force no abstention</text>
+    <text x="50" y="268">C4 · representation</text><rect x="280" y="244" width="620" height="34" rx="8" fill="#d89b2b"/><text x="595" y="268" text-anchor="middle" fill="white" font-weight="700">BLOCKED · four routes, no proof or witness</text>
+    <text x="50" y="320">C5 · DPO triptych</text><rect x="280" y="296" width="620" height="34" rx="8" fill="#16a085"/><text x="595" y="320" text-anchor="middle" fill="white" font-weight="700">VERIFIED · exact canonical identities</text>
+  </g>
+</svg>

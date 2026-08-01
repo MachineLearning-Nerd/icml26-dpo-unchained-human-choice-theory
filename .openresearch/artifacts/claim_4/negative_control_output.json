@@ -1,0 +1,1 @@
+{"finite_route":{"cyclic_model_rejected":true},"adversarial_route":{"linear_model_passes_vectorized_and_brute":true,"cyclic_model_rejected_with_witness":true},"reduction_route":{"adding_absent_closure_axiom_typechecks":true}}

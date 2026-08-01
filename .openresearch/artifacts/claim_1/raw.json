@@ -1,0 +1,1 @@
+{"verdict":"FALSIFIED","psi":"z","F":"sigmoid(z)","smt":"UNSAT","decimal_trials":5,"positive_control_residual":"0"}

@@ -1,0 +1,1 @@
+{"checker":"Z3 plus 60-digit Decimal arithmetic","smt_properness_and_decomposition":"UNSAT","all_decimal_reports_in_open_interval":true,"all_forced_values_below_endpoint":true}

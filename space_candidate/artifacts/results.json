@@ -1,0 +1,22 @@
+{
+  "paper": "2507.07855v4",
+  "paper_source_sha256": "f30cb463d9867221b8fa9c49306b83cd21ec528c59c6e9e115d11436a3220bdc",
+  "scientific_git_sha": "be9e71d16855a80ab75cf19b6aedd0f009ac97d5",
+  "fixed_command": "uv sync --frozen && uv run --frozen python -m reproduction.run",
+  "compute": {"backend": "hf", "flavor": "cpu-upgrade", "gpu_requested": false, "actual_cpus_each_run": 64},
+  "verdicts": {"claim_1": "FALSIFIED", "claim_2": "VERIFIED", "claim_3": "FALSIFIED", "claim_4": "BLOCKED", "claim_5": "VERIFIED"},
+  "claim_1": {"witness": {"psi": "z", "F": "sigmoid(z)"}, "smt": "UNSAT", "decimal_trials": 5, "positive_control_residual": "0", "mutation": "SAT"},
+  "claim_2": {"symbolic_residual": "0", "exact_trials": 200, "dimensions": [2,3,4,5,6,7,8,9], "seed": 4201, "wrong_sign_witness_residual": "4"},
+  "claim_3": {"symbolic_factor": "alpha*(alpha - 1)*(1 - choice_sum)", "smt_abstention_under_axioms": "UNSAT", "dropped_bearability_control": "SAT"},
+  "claim_4": {
+    "route_1": {"lottery_probability": "7/10", "diagonal_probabilities": ["2/5", "2/5"], "result": "published pointwise lemma false; theorem unresolved"},
+    "route_2": {"models_exhausted": 125, "lotteries": 9, "sextuples_per_model": 531441, "klst_models": 19, "represented_models": 19},
+    "route_3": {"p1": "1/4", "p2": "3/4", "target": "2/5", "alpha": "3/10", "result": "mixed-lottery witness is outside asserted atomic domain"},
+    "route_4": {"seeds": [4401,4402,4403], "candidates": 6000, "nonrepresentable": [1997,1997,1993], "total_nonrepresentable": 5987, "axiom_satisfying_nonrepresentable": 0, "counterexample": null},
+    "confidence": "LOW"
+  },
+  "claim_5": {"subgradient_residual": "0", "fenchel_residual": "0", "dpo_residuals": ["0","0","0"], "asymmetric_trials": 19, "symmetry_failures": 19, "wrong_sign_witness_residual": "2"},
+  "visibility_matrix": [
+    {"claim": 1, "complete": true}, {"claim": 2, "complete": true}, {"claim": 3, "complete": true}, {"claim": 4, "complete": true}, {"claim": 5, "complete": true}
+  ]
+}
