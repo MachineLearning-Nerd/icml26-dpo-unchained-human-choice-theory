@@ -1,0 +1,15 @@
+[project]
+name = "dpo-unchained-reproduction"
+version = "0.1.0"
+description = "Claim-by-claim verification of arXiv 2507.07855"
+requires-python = "==3.12.*"
+dependencies = [
+  "marimo",
+  "matplotlib",
+  "numpy",
+  "sympy",
+  "z3-solver",
+]
+
+[tool.uv]
+package = false
