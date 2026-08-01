@@ -2,7 +2,7 @@
 title: "DPO Unchained — exact claim verification"
 emoji: 🔬
 colorFrom: blue
-colorTo: orange
+colorTo: purple
 sdk: static
 pinned: false
 tags:
