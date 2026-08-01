@@ -123,7 +123,7 @@ def claim_3_counterexample() -> dict[str, object]:
 
     passed = all(
         [
-            factorized == alpha * (1 - alpha) * (s - 1),
+            sp.simplify(factorized - alpha * (1 - alpha) * (s - 1)) == 0,
             solved_s == [1],
             abstention_with_axioms == unsat,
             abstention_without_mixed_bearability == sat,
