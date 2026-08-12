@@ -43,9 +43,16 @@ Before publication:
 - [x] STATUS.md records the scientific and publication checkpoints.
 - [x] AUTONOMOUS_STATE.json records the next action and pinned source.
 - [x] Target repository name is available.
-- [ ] Rewrite reachable commit identities.
-- [ ] Rename the GitHub repository.
-- [ ] Push new branch names and remove old ORX branch names.
-- [ ] Verify remote main, branch inventory, README blob, JSON parsing, and commit identities.
+- [x] Rewrite reachable commit identities.
+- [x] Rename the GitHub repository.
+- [x] Push new branch names and remove old ORX branch names.
+- [x] Verify remote main, branch inventory, README blob, JSON parsing, and commit identities.
 
-The final state will be appended below after the GitHub API and remote refs are verified.
+## Published state
+
+- Repository: MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory
+- Default branch: main
+- Main before this final checkpoint commit: 460177fa7e7d52547c07d649c726f7b328d68aa0
+- Published branches: main plus audit/baseline-judged-5-10, audit/constructive-certificates, audit/claims-1-3-falsification, audit/claim-4-finite-klst-search, audit/claim-4-representation-reduction, audit/claim-4-adversarial-falsification, audit/cumulative-four-claim-certificates, release/evaluator-visible-candidate, release/hugging-face-metadata, release/post-publication-verification
+- Deleted branch prefix: orx/
+- Reachable commit identity: MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>

@@ -40,3 +40,6 @@ Overall: 2 verified, 2 falsified, 1 blocked.
 - Historical branches are preserved under descriptive audit/release names.
 - The paper source hash and theorem anchors are recorded in .openresearch/artifacts/source_audit.md.
 - The audit is independent; no separate author implementation was identified for code-level comparison.
+- Reachable commit attribution is normalized to MachineLearning-Nerd.
+- The GitHub repository is renamed to icml26-dpo-unchained-human-choice-theory.
+- The old ORX branch names are deleted; ten descriptive audit/release branches remain beside main.
