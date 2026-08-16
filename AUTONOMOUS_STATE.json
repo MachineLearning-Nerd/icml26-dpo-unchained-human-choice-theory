@@ -2,8 +2,8 @@
   "schema_version": 2,
   "paper": "arXiv:2507.07855v4",
   "openreview_id": "j4c3i3a5kH",
-  "phase": "completed_scoped_audit_dossier_pending_publication",
-  "next_action": "publish_dossier_then_update_collection_tracker_and_continue",
+  "phase": "completed_scoped_audit_published",
+  "next_action": "update_collection_tracker_and_continue_with_next_repository",
   "completed_milestones": [
     "pinned_versioned_arxiv_source_and_hash",
     "recorded_five_claim_contracts",
@@ -59,13 +59,13 @@
     "co_author_trailers_allowed": false
   },
   "pre_dossier_main_commit": "7c6e24001085332492ef842083f9efd5ad75479c",
-  "published_dossier_commit": null,
+  "published_dossier_commit": "e69def294d2e75c1a807d7f24487cdd8a7c565c3",
   "recovery_bundle": {
     "path": "/tmp/icml-dpo-unchained-before-dossier.IAtKIs/dpo-unchained-before-dossier.bundle",
     "sha256": "938a2df5d71300daf402cd2717d3425b12a67a26a9946caaf3c11ad84539899c",
     "verified_complete": true
   },
-  "last_known_git_commit": "7c6e24001085332492ef842083f9efd5ad75479c",
+  "last_known_git_commit": "e69def294d2e75c1a807d7f24487cdd8a7c565c3",
   "last_checkpoint": "2026-08-17",
   "publication_allowed": true
 }
