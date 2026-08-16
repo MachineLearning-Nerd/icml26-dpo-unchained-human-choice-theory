@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this audit or its recorded outputs, please cite the original paper and this repository."
+title: "ICML 2026 DPO Unchained Claim Audit"
+version: "1.0.0"
+date-released: 2026-08-17
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory"
+url: "https://github.com/MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory"
+references:
+  - type: article
+    title: "DPO Unchained: Your Training Algorithm is Secretly Disentangled in Human Choice Theory (and its Loss' Convexity is Dispensable)"
+    authors:
+      - given-names: Wenxuan
+        family-names: Zhou
+      - given-names: Shujian
+        family-names: Zhang
+      - given-names: Brice
+        family-names: Magdalou
+      - given-names: John
+        family-names: Lambert
+      - given-names: Ehsan
+        family-names: Amid
+      - given-names: Richard
+        family-names: Nock
+      - given-names: Andrew
+        family-names: Hard
+    year: 2025
+    url: "https://arxiv.org/abs/2507.07855"
+    identifiers:
+      - type: arxiv
+        value: "2507.07855"

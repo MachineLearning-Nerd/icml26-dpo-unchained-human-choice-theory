@@ -36,6 +36,23 @@ The historical live evaluation score was 5/10. The projected 8–9/10 range in t
 
 The versioned arXiv source archive is authoritative for theorem numbering. The HTML source returned the same current rendering for explicit v1–v4 requests, so versioned source hashes and source anchors are recorded locally rather than inferred from the HTML.
 
+## Audit dossier
+
+The standardized audit files make the repository inspectable without relying
+on a single narrative page:
+
+- CLAIM_EVIDENCE.md — paper anchors, claim contracts, producers, raw evidence,
+  controls, statuses, and boundaries.
+- SOURCE_AUDIT.md — pinned paper revision, source hashes, theorem anchors, and
+  official-code search boundary.
+- BRANCH_AUDIT.md — final branch roles, former ORX names, tips, and attribution
+  checks.
+- ENVIRONMENT.md — fixed command, historical hardware, run IDs, and inputs.
+- REPORT.md — concise decision and evaluation boundary.
+- CITATION.cff and AUTHOR_THANK_YOU.md — citation and author acknowledgement.
+- claims.json and EVIDENCE_MANIFEST.json — machine-readable ledger and hashes.
+- verify_final.py — fail-closed final-state verifier.
+
 ## What the paper is doing
 
 The paper asks how much of Direct Preference Optimization is genuinely tied to the Bradley–Terry/logistic choice model. Its framework separates preference optimization into three mathematical pieces:

@@ -1,9 +1,9 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "paper": "arXiv:2507.07855v4",
   "openreview_id": "j4c3i3a5kH",
-  "phase": "completed_scoped_audit_published",
-  "next_action": "update_collection_tracker_and_continue_with_next_repository",
+  "phase": "completed_scoped_audit_dossier_pending_publication",
+  "next_action": "publish_dossier_then_update_collection_tracker_and_continue",
   "completed_milestones": [
     "pinned_versioned_arxiv_source_and_hash",
     "recorded_five_claim_contracts",
@@ -18,7 +18,8 @@
     "renamed_repository_to_icml26_dpo_unchained_human_choice_theory",
     "published_descriptive_audit_and_release_branches",
     "deleted_obsolete_orx_branch_names",
-    "verified_remote_repository_state"
+    "verified_remote_repository_state",
+    "added_standardized_claim_source_branch_environment_and_release_dossier"
   ],
   "claim_statuses": {
     "claim_1": "falsified_under_finite_real_valued_closed_simplex_contract",
@@ -31,13 +32,40 @@
   "target_github_repository": "https://github.com/MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory",
   "canonical_branch": "main",
   "historical_branch_count": 10,
+  "expected_remote_branches": [
+    "main",
+    "audit/baseline-judged-5-10",
+    "audit/claim-4-adversarial-falsification",
+    "audit/claim-4-finite-klst-search",
+    "audit/claim-4-representation-reduction",
+    "audit/claims-1-3-falsification",
+    "audit/constructive-certificates",
+    "audit/cumulative-four-claim-certificates",
+    "release/evaluator-visible-candidate",
+    "release/hugging-face-metadata",
+    "release/post-publication-verification"
+  ],
   "official_code_status": "no_separate_author_repository_identified_in_source_and_public_github_audit",
   "source_archive_sha256": "f30cb463d9867221b8fa9c49306b83cd21ec528c59c6e9e115d11436a3220bdc",
+  "html_audit_sha256": "57d8b089b1cf01d982df693976bf09362cb01b4cd0c5c41a731ccf9f38885d19",
   "source_retrieved": "2026-08-02",
   "compute_policy": "historical evidence used Hugging Face cpu-upgrade without GPU; current repository changes are documentation and metadata only",
   "live_judge_score": "5/10 historical",
   "forecast": "8-9/10 research forecast only",
-  "last_known_git_commit": "460177fa7e7d52547c07d649c726f7b328d68aa0",
-  "last_checkpoint": "2026-08-13",
+  "canonical_identity": {
+    "name": "MachineLearning-Nerd",
+    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "author_and_committer_required": true,
+    "co_author_trailers_allowed": false
+  },
+  "pre_dossier_main_commit": "7c6e24001085332492ef842083f9efd5ad75479c",
+  "published_dossier_commit": null,
+  "recovery_bundle": {
+    "path": "/tmp/icml-dpo-unchained-before-dossier.IAtKIs/dpo-unchained-before-dossier.bundle",
+    "sha256": "938a2df5d71300daf402cd2717d3425b12a67a26a9946caaf3c11ad84539899c",
+    "verified_complete": true
+  },
+  "last_known_git_commit": "7c6e24001085332492ef842083f9efd5ad75479c",
+  "last_checkpoint": "2026-08-17",
   "publication_allowed": true
 }

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory",
+  "previous_repository": "MachineLearning-Nerd/icml26-repro-j4c3i3a5kH-dpo-unchained-your-training-algorithm-is-secretly-disentangled-in-human-choi",
+  "overall_status": "FALSIFIED_CLAIMS_1_AND_3_VERIFIED_CLAIMS_2_AND_5_BLOCKED_CLAIM_4",
+  "paper": {
+    "title": "DPO Unchained: Your Training Algorithm is Secretly Disentangled in Human Choice Theory (and its Loss' Convexity is Dispensable)",
+    "arxiv": "2507.07855v4",
+    "openreview": "j4c3i3a5kH",
+    "authors": [
+      "Wenxuan Zhou",
+      "Shujian Zhang",
+      "Brice Magdalou",
+      "John Lambert",
+      "Ehsan Amid",
+      "Richard Nock",
+      "Andrew Hard"
+    ],
+    "venue_record": "ICML 2026",
+    "official_code": null,
+    "official_code_status": "no_separate_author_repository_identified_in_source_and_public_github_audit"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "paper_anchor": "Theorem 4.3",
+      "status": "FALSIFIED",
+      "producer": "reproduction/falsification.py::claim_1_counterexample",
+      "evidence": [
+        ".openresearch/artifacts/claim_1/raw.json",
+        ".openresearch/artifacts/claim_1/independent_checker_output.json",
+        ".openresearch/artifacts/claim_1/negative_control_output.json"
+      ],
+      "result": {
+        "witness": "psi(z)=z and F(z)=sigmoid(z)",
+        "smt": "UNSAT",
+        "decimal_trials": 5,
+        "positive_control_residual": "0",
+        "mutation": "SAT"
+      },
+      "limitation": "Falsifies the finite real-valued closed-simplex formulation; extended-real endpoint losses are outside this contract."
+    },
+    {
+      "id": "C2",
+      "paper_anchor": "Theorem 4.1",
+      "status": "VERIFIED",
+      "producer": "reproduction/proof_certificates.py::claim_2_certificate",
+      "evidence": [
+        ".openresearch/artifacts/claim_2/raw.json",
+        ".openresearch/artifacts/claim_2/independent_checker_output.json",
+        ".openresearch/artifacts/claim_2/negative_control_output.json"
+      ],
+      "result": {
+        "symbolic_residual": "0",
+        "exact_trials": 200,
+        "dimensions": [2, 3, 4, 5, 6, 7, 8, 9],
+        "seed": 4201,
+        "wrong_sign_witness_residual": "4"
+      },
+      "limitation": "Verified for proper-loss regrets on the simplex, not arbitrary regularizers."
+    },
+    {
+      "id": "C3",
+      "paper_anchor": "Definitions 3.2-3.4",
+      "status": "FALSIFIED",
+      "producer": "reproduction/falsification.py::claim_3_counterexample",
+      "evidence": [
+        ".openresearch/artifacts/claim_3/raw.json",
+        ".openresearch/artifacts/claim_3/independent_checker_output.json",
+        ".openresearch/artifacts/claim_3/negative_control_output.json"
+      ],
+      "result": {
+        "symbolic_factor": "alpha*(alpha - 1)*(1 - choice_sum)",
+        "smt_abstention_under_axioms": "UNSAT",
+        "dropped_bearability_control": "SAT"
+      },
+      "limitation": "Falsifies the abstention-permitting definition on the stated atomic domain, not every surrounding choice-theory result."
+    },
+    {
+      "id": "C4",
+      "paper_anchor": "Theorem 4.2",
+      "status": "BLOCKED",
+      "producer": "reproduction/representation_search.py::claim_4_exhaustive_search plus reduction_audit.py and adversarial_search.py",
+      "evidence": [
+        ".openresearch/artifacts/claim_4/",
+        ".openresearch/artifacts/claim_4_route_2/",
+        ".openresearch/artifacts/claim_4_route_3/",
+        ".openresearch/artifacts/claim_4_route_4/"
+      ],
+      "result": {
+        "pointwise_lemma_probability": "7/10",
+        "models_exhausted": 125,
+        "lotteries": 9,
+        "sextuples_per_model": 531441,
+        "klst_models": 19,
+        "represented_models": 19,
+        "candidates": 6000,
+        "total_nonrepresentable": 5987,
+        "axiom_satisfying_nonrepresentable": 0,
+        "counterexample": null,
+        "seeds": [4401, 4402, 4403],
+        "confidence": "LOW"
+      },
+      "limitation": "Finite searches cannot prove a universal theorem; the atomic/mixed-lottery domain step remains unresolved."
+    },
+    {
+      "id": "C5",
+      "paper_anchor": "Theorem 4.4 and Corollary 4.5",
+      "status": "VERIFIED",
+      "producer": "reproduction/proof_certificates.py::claim_5_certificate",
+      "evidence": [
+        ".openresearch/artifacts/claim_5/raw.json",
+        ".openresearch/artifacts/claim_5/independent_checker_output.json",
+        ".openresearch/artifacts/claim_5/negative_control_output.json"
+      ],
+      "result": {
+        "subgradient_residual": "0",
+        "fenchel_residual": "0",
+        "dpo_residuals": ["0", "0", "0"],
+        "asymmetric_trials": 19,
+        "symmetry_failures": 19,
+        "wrong_sign_witness_residual": "2"
+      },
+      "limitation": "Algebraic reproduction only; no claim about all preference-training dynamics."
+    }
+  ],
+  "attribution": {
+    "name": "MachineLearning-Nerd",
+    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "author_and_committer_required": true,
+    "co_author_trailers_allowed": false
+  }
+}

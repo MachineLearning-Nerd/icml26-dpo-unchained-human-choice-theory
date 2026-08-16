@@ -43,3 +43,10 @@ Overall: 2 verified, 2 falsified, 1 blocked.
 - Reachable commit attribution is normalized to MachineLearning-Nerd.
 - The GitHub repository is renamed to icml26-dpo-unchained-human-choice-theory.
 - The old ORX branch names are deleted; ten descriptive audit/release branches remain beside main.
+- The standardized dossier is published in CLAIM_EVIDENCE.md, SOURCE_AUDIT.md,
+  BRANCH_AUDIT.md, ENVIRONMENT.md, REPORT.md, CITATION.cff,
+  AUTHOR_THANK_YOU.md, claims.json, and EVIDENCE_MANIFEST.json.
+- The pre-dossier main tip is 7c6e24001085332492ef842083f9efd5ad75479c and the
+  pre-dossier history contains 16 unique reachable commits.
+- verify_final.py checks the remote branch inventory, canonical identities,
+  source/evidence hashes, claim statuses, and required documentation.
