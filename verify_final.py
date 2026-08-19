@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory"
 CANONICAL_NAME = "MachineLearning-Nerd"
-CANONICAL_EMAIL = "37579156+MachineLearning-Nerd@users.noreply.github.com"
+CANONICAL_EMAIL = "MachineLearning-Nerd@users.noreply.github.com"
 EXPECTED_SOURCE_SHA = "f30cb463d9867221b8fa9c49306b83cd21ec528c59c6e9e115d11436a3220bdc"
 EXPECTED_BRANCHES = {
     "main",
@@ -45,6 +45,7 @@ REQUIRED_FILES = {
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py",
     "AUTONOMOUS_STATE.json",
@@ -234,12 +235,41 @@ def verify_ledgers_and_state() -> None:
     state = read_json("AUTONOMOUS_STATE.json")
     if {row.get("id"): row.get("status") for row in claims["claims"]} != EXPECTED_CLAIMS:
         fail("claims.json statuses are wrong")
+    if (
+        claims.get("overall_verdict")
+        != "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM"
+        or claims.get("publication_allowed") is not False
+        or claims.get("score_claim") is not False
+        or claims.get("official_author_endorsement") is not False
+    ):
+        fail("claims.json publication boundary is wrong")
+    reproduction = read_json("reproduction_verdicts.json")
+    if (
+        reproduction.get("repository") != EXPECTED_REPOSITORY
+        or reproduction.get("overall_verdict")
+        != "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM"
+        or reproduction.get("publication_allowed") is not False
+        or reproduction.get("score_claim") is not False
+        or reproduction.get("official_author_endorsement") is not False
+        or [(row.get("id"), row.get("status")) for row in reproduction.get("claims", [])]
+        != [(row.get("id"), row.get("status")) for row in claims.get("claims", [])]
+    ):
+        fail("reproduction verdict boundary is wrong")
     if state.get("target_github_repository") != (
         "https://github.com/" + EXPECTED_REPOSITORY
     ):
         fail("state repository marker is wrong")
     if state.get("canonical_branch") != "main":
         fail("state canonical branch is wrong")
+    if (
+        state.get("publication_allowed") is not False
+        or state.get("overall_verdict")
+        != "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM"
+        or state.get("score_claim") is not False
+        or state.get("official_author_endorsement") is not False
+        or state.get("branch_count") != len(EXPECTED_BRANCHES)
+    ):
+        fail("state publication boundary is wrong")
     if state.get("canonical_identity", {}).get("name") != CANONICAL_NAME:
         fail("state canonical identity is wrong")
     if state.get("source_archive_sha256") != EXPECTED_SOURCE_SHA:
@@ -260,6 +290,7 @@ def verify_documentation() -> None:
         "FALSIFIED",
         "VERIFIED",
         "BLOCKED",
+        "reproduction_verdicts.json",
         "verify_final.py",
     ):
         if marker not in readme:

@@ -45,7 +45,10 @@ Overall: 2 verified, 2 falsified, 1 blocked.
 - The old ORX branch names are deleted; ten descriptive audit/release branches remain beside main.
 - The standardized dossier is published in CLAIM_EVIDENCE.md, SOURCE_AUDIT.md,
   BRANCH_AUDIT.md, ENVIRONMENT.md, REPORT.md, CITATION.cff,
-  AUTHOR_THANK_YOU.md, claims.json, and EVIDENCE_MANIFEST.json.
+  AUTHOR_THANK_YOU.md, claims.json, reproduction_verdicts.json, and
+  EVIDENCE_MANIFEST.json.
+- `publication_allowed` is false for a complete reproduction or score; the
+  historical 5/10 and 8–9/10 forecast remain provenance only.
 - The pre-dossier main tip is 7c6e24001085332492ef842083f9efd5ad75479c and the
   pre-dossier history contains 16 unique reachable commits.
 - verify_final.py checks the remote branch inventory, canonical identities,

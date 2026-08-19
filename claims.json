@@ -3,6 +3,10 @@
   "repository": "MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory",
   "previous_repository": "MachineLearning-Nerd/icml26-repro-j4c3i3a5kH-dpo-unchained-your-training-algorithm-is-secretly-disentangled-in-human-choi",
   "overall_status": "FALSIFIED_CLAIMS_1_AND_3_VERIFIED_CLAIMS_2_AND_5_BLOCKED_CLAIM_4",
+  "overall_verdict": "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
   "paper": {
     "title": "DPO Unchained: Your Training Algorithm is Secretly Disentangled in Human Choice Theory (and its Loss' Convexity is Dispensable)",
     "arxiv": "2507.07855v4",
@@ -126,7 +130,7 @@
   ],
   "attribution": {
     "name": "MachineLearning-Nerd",
-    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
     "author_and_committer_required": true,
     "co_author_trailers_allowed": false
   }

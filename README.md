@@ -50,8 +50,13 @@ on a single narrative page:
 - ENVIRONMENT.md — fixed command, historical hardware, run IDs, and inputs.
 - REPORT.md — concise decision and evaluation boundary.
 - CITATION.cff and AUTHOR_THANK_YOU.md — citation and author acknowledgement.
-- claims.json and EVIDENCE_MANIFEST.json — machine-readable ledger and hashes.
+- claims.json and reproduction_verdicts.json — machine-readable claim statuses, production paths, and evidence boundaries.
+- EVIDENCE_MANIFEST.json — content-addressed dossier and evidence hashes.
 - verify_final.py — fail-closed final-state verifier.
+
+`publication_allowed` is `false` for a complete paper reproduction or score:
+Claims 1 and 3 are literal-contract falsifications, Claims 2 and 5 are
+scoped algebraic verifications, and Claim 4 remains blocked.
 
 ## What the paper is doing
 

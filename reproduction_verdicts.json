@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory",
+  "paper": {
+    "title": "DPO Unchained: Your Training Algorithm is Secretly Disentangled in Human Choice Theory (and its Loss' Convexity is Dispensable)",
+    "arxiv": "2507.07855v4",
+    "openreview": "j4c3i3a5kH",
+    "authors": [
+      "Wenxuan Zhou",
+      "Shujian Zhang",
+      "Brice Magdalou",
+      "John Lambert",
+      "Ehsan Amid",
+      "Richard Nock",
+      "Andrew Hard"
+    ]
+  },
+  "overall_verdict": "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
+  "claims": [
+    {
+      "id": "C1",
+      "status": "FALSIFIED",
+      "production_path": "reproduction/falsification.py::claim_1_counterexample -> SMT certificate and positive/mutation controls",
+      "scope": "The finite real-valued closed-simplex endpoint construction fails for psi(z)=z and F(z)=sigmoid(z); extended-real endpoints are outside the contract.",
+      "evidence": [".openresearch/artifacts/claim_1/raw.json", ".openresearch/artifacts/claim_1/independent_checker_output.json", ".openresearch/artifacts/claim_1/negative_control_output.json"]
+    },
+    {
+      "id": "C2",
+      "status": "VERIFIED",
+      "production_path": "reproduction/proof_certificates.py::claim_2_certificate -> symbolic residual and 200 exact rational trials",
+      "scope": "The proper-loss regret/Bregman identity holds on the stated simplex scope; arbitrary regularizers are not claimed.",
+      "evidence": [".openresearch/artifacts/claim_2/raw.json", ".openresearch/artifacts/claim_2/independent_checker_output.json", ".openresearch/artifacts/claim_2/negative_control_output.json"]
+    },
+    {
+      "id": "C3",
+      "status": "FALSIFIED",
+      "production_path": "reproduction/falsification.py::claim_3_counterexample -> symbolic factor, SMT abstention check, and dropped-premise control",
+      "scope": "The stated atomic KLST* axioms force zero abstention; the result does not falsify every surrounding choice-theory theorem.",
+      "evidence": [".openresearch/artifacts/claim_3/raw.json", ".openresearch/artifacts/claim_3/independent_checker_output.json", ".openresearch/artifacts/claim_3/negative_control_output.json"]
+    },
+    {
+      "id": "C4",
+      "status": "BLOCKED",
+      "production_path": "reproduction/representation_search.py::claim_4_exhaustive_search plus reduction_audit.py and adversarial_search.py",
+      "scope": "Finite routes find no valid counterexample, but the atomic/mixed-lottery domain step remains unresolved and no universal proof is complete.",
+      "evidence": [".openresearch/artifacts/claim_4/", ".openresearch/artifacts/claim_4_route_2/", ".openresearch/artifacts/claim_4_route_3/", ".openresearch/artifacts/claim_4_route_4/"]
+    },
+    {
+      "id": "C5",
+      "status": "VERIFIED",
+      "production_path": "reproduction/proof_certificates.py::claim_5_certificate -> proper-loss identities, DPO specialization, and asymmetric/sign controls",
+      "scope": "The proper-loss triptych and log-loss/sigmoid/logistic DPO specialization reproduce algebraically; no preference-training dynamics claim is made.",
+      "evidence": [".openresearch/artifacts/claim_5/raw.json", ".openresearch/artifacts/claim_5/independent_checker_output.json", ".openresearch/artifacts/claim_5/negative_control_output.json"]
+    }
+  ]
+}

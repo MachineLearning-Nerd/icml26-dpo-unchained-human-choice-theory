@@ -10,6 +10,18 @@
     "C5": "VERIFIED"
   },
   "content_addressed_artifacts": [
+    {"path": "README.md", "sha256": "232d20000b260573a43a9fcebdb024ac44af25280fa2feb075969d72a1d7be62"},
+    {"path": "STATUS.md", "sha256": "54f8bd34bf118aa515d7327c6bc62238df1330cb849dbb16f4292286a58af11a"},
+    {"path": "REPORT.md", "sha256": "ade6aa86cfad84d0b2be1da9792439ed6a966d4bd6a8d84a6d9f82ee28a3d66b"},
+    {"path": "CLAIM_EVIDENCE.md", "sha256": "7fc3e6378297c2b9843d1c39e37a9fb9ab259f98fd259c74278e52d5c8c6ae44"},
+    {"path": "SOURCE_AUDIT.md", "sha256": "221b05127575aa67ef64c9d91a7130584ab43d4b8cf91fc3ebe27136d3be84e8"},
+    {"path": "BRANCH_AUDIT.md", "sha256": "7512919f46a258aad56cfd1f10a166d952dd0d0e4409f20a11166d0e6098aa33"},
+    {"path": "ENVIRONMENT.md", "sha256": "26563834b5fa9b9788469cfa3a7fbeb8aa71741eb253bbde5beddf5413dd80e1"},
+    {"path": "AUTHOR_THANK_YOU.md", "sha256": "2fd7528ae7ab6ecb3f32e9d782c81230893ef7f54bb88e5aeb719582f6a94caf"},
+    {"path": "CITATION.cff", "sha256": "c43146f00e25318642a56752c3aac0af958f95363562c04f3968f5e23c3df9da"},
+    {"path": "claims.json", "sha256": "22dd3b39954bff49c1dafc3e2d1c1c215fd4cd818cd55fe5730f67de12d9b75d"},
+    {"path": "reproduction_verdicts.json", "sha256": "4ff40ac27efc39e7b38b14711c7cc018d3672d5bd2c94187ce5d8727d5bfd615"},
+    {"path": "verify_final.py", "sha256": "9c60895b8b2c05a307ad17139601f2a9b46a3090f19c875bd54b8bef3b22ad55"},
     {"path": ".openresearch/artifacts/source_audit.md", "sha256": "7555c3436c7818f0d03c4a09ff505957d516800f32d0c24be801aebc944641bb"},
     {"path": ".openresearch/artifacts/contracts/claim_contract.json", "sha256": "f0666732a91d726ff5eccd6e0f0976a96f74e75cf37a4ef0f1df9425ff6c7e1a"},
     {"path": ".openresearch/artifacts/claim_1/claim_contract.json", "sha256": "f0666732a91d726ff5eccd6e0f0976a96f74e75cf37a4ef0f1df9425ff6c7e1a"},
@@ -54,6 +66,7 @@
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py"
   ],
@@ -117,7 +130,7 @@
   },
   "attribution": {
     "name": "MachineLearning-Nerd",
-    "email": "37579156+MachineLearning-Nerd@users.noreply.github.com",
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
     "author_and_committer_required": true,
     "co_author_trailers_allowed": false
   }
