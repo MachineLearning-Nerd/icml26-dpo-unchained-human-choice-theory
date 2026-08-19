@@ -16,6 +16,8 @@ The audit covers the five theorem/definition statements used by the paper's eval
 
 The historical live evaluation score was 5/10. The projected 8–9/10 range in the research notes is a forecast, not a judge result.
 
+Publication boundary: publication_allowed=false, score_claim=false, and official_author_endorsement=false. This repository publishes a scoped mathematical audit only; it does not claim a full-paper reproduction, a new evaluation score, or author endorsement.
+
 ## Paper and provenance
 
 | Field | Record |
@@ -51,12 +53,15 @@ on a single narrative page:
 - REPORT.md — concise decision and evaluation boundary.
 - CITATION.cff and AUTHOR_THANK_YOU.md — citation and author acknowledgement.
 - claims.json and reproduction_verdicts.json — machine-readable claim statuses, production paths, and evidence boundaries.
+- AUTONOMOUS_STATE.json — durable continuation and publication state.
 - EVIDENCE_MANIFEST.json — content-addressed dossier and evidence hashes.
 - verify_final.py — fail-closed final-state verifier.
 
-`publication_allowed` is `false` for a complete paper reproduction or score:
-Claims 1 and 3 are literal-contract falsifications, Claims 2 and 5 are
-scoped algebraic verifications, and Claim 4 remains blocked.
+The publication boundary remains explicit: publication_allowed=false for a
+complete paper reproduction or score; score_claim=false and
+official_author_endorsement=false. Claims 1 and 3 are literal-contract
+falsifications, Claims 2 and 5 are scoped algebraic verifications, and Claim 4
+remains blocked.
 
 ## What the paper is doing
 

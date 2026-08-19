@@ -2,6 +2,10 @@
   "schema_version": 1,
   "repository": "MachineLearning-Nerd/icml26-dpo-unchained-human-choice-theory",
   "paper": "arXiv:2507.07855v4",
+  "overall_verdict": "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
   "claim_statuses": {
     "C1": "FALSIFIED",
     "C2": "VERIFIED",
@@ -10,9 +14,9 @@
     "C5": "VERIFIED"
   },
   "content_addressed_artifacts": [
-    {"path": "README.md", "sha256": "232d20000b260573a43a9fcebdb024ac44af25280fa2feb075969d72a1d7be62"},
-    {"path": "STATUS.md", "sha256": "54f8bd34bf118aa515d7327c6bc62238df1330cb849dbb16f4292286a58af11a"},
-    {"path": "REPORT.md", "sha256": "ade6aa86cfad84d0b2be1da9792439ed6a966d4bd6a8d84a6d9f82ee28a3d66b"},
+    {"path": "README.md", "sha256": "6eb3923516cdbe6528e74e5be8486484c4619650dbf1bc481a13a3cf5c7a16b9"},
+    {"path": "STATUS.md", "sha256": "2d9f422dd90253643df744c0ee900c3d6a59fe5df28fe0968c8cd65d7d500185"},
+    {"path": "REPORT.md", "sha256": "485caf02e61577d7ce71eef487206fc8e28685f59a031ee8a63ccc79923b01a3"},
     {"path": "CLAIM_EVIDENCE.md", "sha256": "7fc3e6378297c2b9843d1c39e37a9fb9ab259f98fd259c74278e52d5c8c6ae44"},
     {"path": "SOURCE_AUDIT.md", "sha256": "221b05127575aa67ef64c9d91a7130584ab43d4b8cf91fc3ebe27136d3be84e8"},
     {"path": "BRANCH_AUDIT.md", "sha256": "7512919f46a258aad56cfd1f10a166d952dd0d0e4409f20a11166d0e6098aa33"},
@@ -21,7 +25,7 @@
     {"path": "CITATION.cff", "sha256": "c43146f00e25318642a56752c3aac0af958f95363562c04f3968f5e23c3df9da"},
     {"path": "claims.json", "sha256": "22dd3b39954bff49c1dafc3e2d1c1c215fd4cd818cd55fe5730f67de12d9b75d"},
     {"path": "reproduction_verdicts.json", "sha256": "4ff40ac27efc39e7b38b14711c7cc018d3672d5bd2c94187ce5d8727d5bfd615"},
-    {"path": "verify_final.py", "sha256": "9c60895b8b2c05a307ad17139601f2a9b46a3090f19c875bd54b8bef3b22ad55"},
+    {"path": "verify_final.py", "sha256": "42b94a1526e4b4316dced08efcc1624f2bc684bb5e5c5ba4ea300bdb429cf440"},
     {"path": ".openresearch/artifacts/source_audit.md", "sha256": "7555c3436c7818f0d03c4a09ff505957d516800f32d0c24be801aebc944641bb"},
     {"path": ".openresearch/artifacts/contracts/claim_contract.json", "sha256": "f0666732a91d726ff5eccd6e0f0976a96f74e75cf37a4ef0f1df9425ff6c7e1a"},
     {"path": ".openresearch/artifacts/claim_1/claim_contract.json", "sha256": "f0666732a91d726ff5eccd6e0f0976a96f74e75cf37a4ef0f1df9425ff6c7e1a"},
@@ -53,7 +57,8 @@
     {"path": "space_candidate/artifacts/results.json", "sha256": "6955532a43e94a2c8b317d311f75b18662fc3c57a17dcf8351b0b75821cf3511"},
     {"path": "space_candidate/artifacts/runs.json", "sha256": "07c52b6d78b49d311ac8dd2cb44970a353a77e672757599b3030a4e895d81dc6"},
     {"path": "pyproject.toml", "sha256": "74ddc17b077572df6ffa8ffa407100def9a43312ab493a924a9c40ce19c3f56b"},
-    {"path": "uv.lock", "sha256": "f0b0764e0063359fcb52f3be55709b86ae3bd3cfd45213babf7f45eb3e3fab8d"}
+    {"path": "uv.lock", "sha256": "f0b0764e0063359fcb52f3be55709b86ae3bd3cfd45213babf7f45eb3e3fab8d"},
+    {"path": "AUTONOMOUS_STATE.json", "sha256": "700d86b5a3c4c5c20de59c07f5f303b13e28b030062529b2eef635128ac40320"}
   ],
   "required_audit_files": [
     "README.md",
@@ -67,6 +72,7 @@
     "CITATION.cff",
     "claims.json",
     "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py"
   ],

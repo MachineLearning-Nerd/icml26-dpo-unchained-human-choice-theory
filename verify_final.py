@@ -158,11 +158,15 @@ def verify_manifest() -> None:
         fail("manifest repository marker is wrong")
     if manifest.get("claim_statuses") != EXPECTED_CLAIMS:
         fail("manifest claim statuses are wrong")
-    expected_audit_files = {
-        relative_path
-        for relative_path in REQUIRED_FILES
-        if relative_path != "AUTONOMOUS_STATE.json"
-    }
+    if manifest.get("overall_verdict") != "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM":
+        fail("manifest overall verdict is wrong")
+    if manifest.get("publication_allowed") is not False:
+        fail("manifest publication boundary is wrong")
+    if manifest.get("score_claim") is not False:
+        fail("manifest score boundary is wrong")
+    if manifest.get("official_author_endorsement") is not False:
+        fail("manifest author-endorsement boundary is wrong")
+    expected_audit_files = REQUIRED_FILES
     if set(manifest.get("required_audit_files", [])) != expected_audit_files:
         fail("manifest audit-file list is wrong")
     if set(manifest.get("branches", {}).get("expected_final", [])) != EXPECTED_BRANCHES:
@@ -291,6 +295,10 @@ def verify_documentation() -> None:
         "VERIFIED",
         "BLOCKED",
         "reproduction_verdicts.json",
+        "AUTONOMOUS_STATE.json",
+        "publication_allowed",
+        "score_claim",
+        "official_author_endorsement",
         "verify_final.py",
     ):
         if marker not in readme:

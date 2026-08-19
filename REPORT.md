@@ -2,6 +2,9 @@
 
 ## Decision
 
+Machine-readable overall verdict: `SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM`.
+publication_allowed=false, score_claim=false, and official_author_endorsement=false.
+
 **FALSIFIED_CLAIMS_1_AND_3_VERIFIED_CLAIMS_2_AND_5_BLOCKED_CLAIM_4**
 
 This is a scoped audit of the five paper targets. Claims 1 and 3 fail the

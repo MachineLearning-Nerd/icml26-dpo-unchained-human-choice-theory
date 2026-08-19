@@ -82,6 +82,7 @@
     "AUTHOR_THANK_YOU.md",
     "claims.json",
     "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py"
   ]
