@@ -65,8 +65,8 @@
     "sha256": "938a2df5d71300daf402cd2717d3425b12a67a26a9946caaf3c11ad84539899c",
     "verified_complete": true
   },
-  "last_known_git_commit": "e69def294d2e75c1a807d7f24487cdd8a7c565c3",
-  "last_checkpoint": "2026-08-17",
+  "last_known_git_commit": "02fb8c17f44cb0c7feb93f0f48697689c3e22f69",
+  "last_checkpoint": "2026-08-19T14:23:37+05:30",
   "publication_allowed": false,
   "overall_verdict": "SCOPED_REPRODUCTION_WITH_LITERAL_FALSIFICATIONS_AND_BLOCKED_UNIVERSAL_CLAIM",
   "score_claim": false,
